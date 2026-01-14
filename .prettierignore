@@ -1,0 +1,12 @@
+# 외부 패키지 (포맷팅 불필요)
+node_modules     
+# 빌드 결과물
+dist             
+# 빌드 결과물
+build            
+# VSCode 설정 파일
+.vscode          
+# 이미 압축된 JS 파일
+*.min.js         
+#자동 생성 파일 (건드리면 안됨)
+package-lock.json 
