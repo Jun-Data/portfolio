@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,6 +42,22 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* CSS Custom Properties */
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+  --color-sky-light: var(--sky-light);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: var(--gold-light);
+
+  /* Custom Animation */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 7s ease-in-out 1s infinite;
+  --animate-spin-slow: spin 15s linear infinite;
 }
 
 :root {
@@ -77,6 +93,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* CSS Custom Property Value */
+  --sky: #6cabdd;
+  --sky-foreground: #1c2c5b;
+  --sky-light: #9acbeb;
+  --navy: #1c2c5b;
+  --navy-foreground: #ffffff;
+  --gold: #daa520;
+  --gold-foreground: #1c2c5b;
+  --gold-dark: #b8860b;
+  --gold-light: #f4c430;
 }
 
 .dark {
@@ -111,6 +138,62 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* CSS Custom Property Value */
+  --sky: #0f1a2e;
+  --sky-foreground: #e2e8f0;
+  --sky-light: #1a2a4a;
+  --navy: #a8b8d8;
+  --navy-foreground: #0f1a2e;
+  --gold: #f4c430;
+  --gold-foreground: #1a1200;
+  --gold-dark: #daa520;
+  --gold-light: #ffd700;
+}
+
+/* Claymorphism */
+.clay-card-white {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 6px 6px 12px rgba(255, 255, 255, 0.9),
+    inset -6px -6px 12px rgba(108, 171, 221, 0.2),
+    12px 12px 24px rgba(28, 44, 91, 0.25);
+  border-radius: 32px;
+}
+
+.clay-card-purple {
+  background: var(--navy);
+  box-shadow:
+    inset 6px 6px 12px rgba(255, 255, 255, 0.2),
+    inset -6px -6px 12px rgba(0, 0, 0, 0.3),
+    12px 12px 24px rgba(10, 20, 50, 0.4);
+  border-radius: 32px;
+}
+
+.clay-card-yellow {
+  background: var(--gold);
+  box-shadow:
+    inset 6px 6px 12px rgba(255, 255, 255, 0.5),
+    inset -6px -6px 12px rgba(161, 98, 7, 0.2),
+    12px 12px 24px rgba(28, 44, 91, 0.3);
+  border-radius: 32px;
+}
+
+.clay-text {
+  text-shadow: 3px 3px 0px rgba(28, 44, 91, 0.15);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 @layer base {
@@ -119,5 +202,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-fredoka);
   }
 }

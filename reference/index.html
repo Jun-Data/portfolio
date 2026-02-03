@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stay Fresh - Dev Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        background-color: #6CABDD; /* Man City Sky Blue */
+      }
+      /* Custom Claymorphism Shadows */
+      .clay-card-white {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        box-shadow: 
+          inset 6px 6px 12px rgba(255, 255, 255, 0.9),
+          inset -6px -6px 12px rgba(108, 171, 221, 0.2), /* Sky blue tint in shadow */
+          12px 12px 24px rgba(28, 44, 91, 0.25); /* Navy shadow */
+        border-radius: 32px;
+      }
+      /* Replaces the old Purple - Now Navy Blue */
+      .clay-card-purple {
+        background: #1C2C5B; /* Man City Navy */
+        box-shadow: 
+          inset 6px 6px 12px rgba(255, 255, 255, 0.2),
+          inset -6px -6px 12px rgba(0, 0, 0, 0.3),
+          12px 12px 24px rgba(10, 20, 50, 0.4);
+        border-radius: 32px;
+      }
+      /* Replaces the old Yellow - Now Gold */
+      .clay-card-yellow {
+        background: #DAA520; /* Man City Gold-ish */
+        box-shadow: 
+          inset 6px 6px 12px rgba(255, 255, 255, 0.5),
+          inset -6px -6px 12px rgba(161, 98, 7, 0.2),
+          12px 12px 24px rgba(28, 44, 91, 0.3);
+        border-radius: 32px;
+      }
+      .clay-text {
+        text-shadow: 3px 3px 0px rgba(28, 44, 91, 0.15);
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-float-delayed {
+        animation: float 7s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+      .animate-spin-slow {
+        animation: spin 15s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
