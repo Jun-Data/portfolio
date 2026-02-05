@@ -1,4 +1,4 @@
-export function BackgroundBlobs() {
+export default function BackgroundBlobs() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       {/* 왼쪽 상단 - sky 색상 blob */}

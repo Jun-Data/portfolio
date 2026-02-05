@@ -4,7 +4,7 @@ import { ClayButton } from '@/components/ClayButton'
 import { ClayCard } from '@/components/ClayCard'
 import Tagline from '@/components/Tagline'
 
-export function Hero() {
+export default function Hero() {
   return (
     <section id="home" className="grid grid-cols-2 gap-8 items-center">
       {/* 왼쪽 영역 */}
