@@ -1,6 +1,7 @@
 import BackgroundBlobs from '@/components/BackgroundBlobs'
 import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
+import Projects from '@/components/Projects'
 
 export default function page() {
   return (
@@ -8,6 +9,7 @@ export default function page() {
       <BackgroundBlobs />
       <Hero />
       <Skills />
+      <Projects />
     </div>
   )
 }
