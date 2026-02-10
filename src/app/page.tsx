@@ -2,6 +2,7 @@ import BackgroundBlobs from '@/components/BackgroundBlobs'
 import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
+import Experiences from '@/components/Experiences'
 
 export default function page() {
   return (
@@ -10,6 +11,7 @@ export default function page() {
       <Hero />
       <Skills />
       <Projects />
+      <Experiences />
     </div>
   )
 }
