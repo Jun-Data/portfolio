@@ -4,6 +4,7 @@ import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Experiences from '@/components/Experiences'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default function page() {
   return (
@@ -14,6 +15,7 @@ export default function page() {
       <Projects />
       <Experiences />
       <Contact />
+      <Footer />
     </div>
   )
 }
