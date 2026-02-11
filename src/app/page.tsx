@@ -8,14 +8,16 @@ import Footer from '@/components/Footer'
 
 export default function page() {
   return (
-    <div className="flex flex-col gap-16 bg-[#6CABDD]">
+    <div className="min-h-screen bg-[#6CABDD]">
       <BackgroundBlobs />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Experiences />
-      <Contact />
-      <Footer />
+      <main className="relative max-w-7xl mx-auto px-6 py-6 flex flex-col gap-16">
+        <Hero />
+        <Skills />
+        <Projects />
+        <Experiences />
+        <Contact />
+        <Footer />
+      </main>
     </div>
   )
 }
