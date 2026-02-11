@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir /s \"c:\\\\Users\\\\이현준\\\\Desktop\\\\portfolio\\\\src\")"
+      "Bash(dir /s \"c:\\\\Users\\\\이현준\\\\Desktop\\\\portfolio\\\\src\")",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:bundlephobia.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)"
     ]
   }
 }
