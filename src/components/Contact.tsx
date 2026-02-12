@@ -7,8 +7,11 @@ import { Send } from 'lucide-react'
 export default function Contact() {
   return (
     <section id="contact" className="py-6">
-      <div className="max-w-5xl mx-auto">
-        <ClayCard variant="yellow" className="text-center py-16 px-6">
+      <div className="max-w-4xl mx-auto">
+        <ClayCard
+          variant="yellow"
+          className="text-center py-16 px-6 hover:scale-100 active:scale-100"
+        >
           <h2 className="text-5xl font-black text-navy mb-6">
             READY TO COLLABORATE?
           </h2>
@@ -19,7 +22,7 @@ export default function Contact() {
 
           {/* Form */}
           <form
-            className="max-w-lg mx-auto flex flex-col gap-4 text-left"
+            className="max-w-2xl mx-auto flex flex-col gap-4 text-left"
             onSubmit={(e) => e.preventDefault()}
           >
             <input

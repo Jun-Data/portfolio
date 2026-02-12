@@ -12,7 +12,7 @@ export default function page() {
     <div className="min-h-screen bg-[#6CABDD]">
       <BackgroundBlobs />
       <Navigation />
-      <main className="relative max-w-7xl mx-auto px-6 py-10 flex flex-col gap-16">
+      <main className="relative max-w-6xl mx-auto px-6 py-10 flex flex-col gap-16">
         <Hero />
         <Skills />
         <Projects />

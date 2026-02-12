@@ -18,7 +18,7 @@ export default function Skills() {
             CREATIVE <br />
             TOOLKIT
           </h2>
-          <div className="h-4 w-32 bg-navy rounded-full mt-2" />
+          <div className="h-3 w-32 bg-navy rounded-full mt-2" />
         </div>
 
         {/* 필터 탭 */}
@@ -36,14 +36,14 @@ export default function Skills() {
       </div>
 
       {/* 아래 영역 */}
-      <div className="grid grid-cols-6 gap-3">
+      <div className="max-w-5xl mx-auto grid grid-cols-6 gap-3">
         {skills.map((skill) => {
           const isActive = activeTab === 'All' || skill.category === activeTab
           return (
             <ClayCard
               key={skill.name}
               variant="white"
-              className={`flex flex-col items-center justify-center p-3 min-h-25 transition-all duration-500 ${isActive ? 'opacity-100 blur-0 scale-100 hover:scale-105 cursor-pointer' : 'opacity-30 blur-[2px] scale-95 grayscale pointer-events-none'}`}
+              className={`flex flex-col items-center justify-center p-3 min-h-25 transition-all duration-500 ${isActive ? 'opacity-100 blur-0 scale-100 hover:scale-105' : 'opacity-30 blur-[2px] scale-95 grayscale pointer-events-none'}`}
             >
               <Image
                 src={skill.url}

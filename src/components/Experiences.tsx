@@ -17,11 +17,11 @@ export default function Experiences() {
         <h2 className="text-5xl font-black text-white clay-text">
           WORK <br /> HISTORY
         </h2>
-        <div className="h-4 w-32 bg-navy rounded-full mt-2" />
+        <div className="h-3 w-32 bg-navy rounded-full mt-2" />
       </div>
 
       {/* Card List */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 max-w-5xl mx-auto">
         {experiences.map((experience) => {
           const Icon = iconMap[experience.type as keyof typeof iconMap]
           return (

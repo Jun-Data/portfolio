@@ -10,11 +10,11 @@ export default function Projects() {
         <h2 className="text-5xl font-black text-white clay-text">
           FEATURED <br /> STUFF
         </h2>
-        <div className="h-4 w-32 bg-navy rounded-full mt-2" />
+        <div className="h-3 w-32 bg-navy rounded-full mt-2" />
       </div>
 
       {/* project cards */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8">
         {projects.map((project) => (
           <ClayCard
             key={project.title}
