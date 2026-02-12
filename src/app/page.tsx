@@ -5,12 +5,14 @@ import Projects from '@/components/Projects'
 import Experiences from '@/components/Experiences'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import Navigation from '@/components/Navigation'
 
 export default function page() {
   return (
     <div className="min-h-screen bg-[#6CABDD]">
       <BackgroundBlobs />
-      <main className="relative max-w-7xl mx-auto px-6 py-6 flex flex-col gap-16">
+      <Navigation />
+      <main className="relative max-w-7xl mx-auto px-6 py-10 flex flex-col gap-16">
         <Hero />
         <Skills />
         <Projects />

@@ -9,7 +9,7 @@ export default function Skills() {
   const [activeTab, setActiveTab] = useState('All')
 
   return (
-    <section id="skills" className="py-16">
+    <section id="skills" className="py-6">
       {/* 위쪽 영역 */}
       <div className="flex items-end justify-between mb-8">
         {/* 제목 */}
