@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function Experiences() {
   return (
-    <section id="experiences" className="py-16">
+    <section id="experiences" className="py-6">
       {/* 제목 */}
       <div className="mb-12">
         <h2 className="text-5xl font-black text-white clay-text">

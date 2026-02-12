@@ -6,7 +6,7 @@ import { Send } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16">
+    <section id="contact" className="py-6">
       <div className="max-w-5xl mx-auto">
         <ClayCard variant="yellow" className="text-center py-16 px-6">
           <h2 className="text-5xl font-black text-navy mb-6">

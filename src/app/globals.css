@@ -205,3 +205,7 @@
     font-family: var(--font-fredoka);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

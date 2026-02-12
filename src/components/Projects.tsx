@@ -4,7 +4,7 @@ import { projects } from '@/data/projects'
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-6">
       {/* Project section  */}
       <div className="mb-12">
         <h2 className="text-5xl font-black text-white clay-text">
