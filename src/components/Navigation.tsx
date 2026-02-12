@@ -5,15 +5,11 @@ import { useScrollPast } from '@/hooks/useScrollPast'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { ArrowUp } from 'lucide-react'
 
+const sectionIds = navItems.map((item) => item.id)
+
 export default function Navigation() {
-  const isScrolled = useScrollPast(100)
-  const activeSection = useActiveSection([
-    'home',
-    'skills',
-    'projects',
-    'experiences',
-    'contact',
-  ])
+  const isScrolled = useScrollPast(300)
+  const activeSection = useActiveSection(sectionIds)
   return (
     <div
       className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ${
