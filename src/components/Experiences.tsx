@@ -14,10 +14,10 @@ export default function Experiences() {
     <section id="experiences" className="py-6">
       {/* 제목 */}
       <div className="mb-12">
-        <h2 className="text-5xl font-black text-white clay-text">
+        <h2 className="text-5xl font-black text-navy clay-text">
           WORK <br /> HISTORY
         </h2>
-        <div className="h-3 w-32 bg-navy rounded-full mt-2" />
+        <div className="h-3 w-32 bg-gold rounded-full mt-2" />
       </div>
 
       {/* Card List */}
@@ -31,7 +31,7 @@ export default function Experiences() {
               className="flex items-start p-6 gap-6 hover:scale-[1.02] transition-transform"
             >
               {/* Icon Area */}
-              <div className="flex shrink-0 items-center justify-center bg-navy text-white w-16 h-16 rounded-2xl shadow-[4px_4px_8px_rgba(28,44,91,0.2)]">
+              <div className="flex shrink-0 items-center justify-center bg-navy text-white w-16 h-16 rounded-2xl shadow-[4px_4px_8px_rgba(12,74,110,0.2)]">
                 <Icon size={28} />
               </div>
 
@@ -42,14 +42,14 @@ export default function Experiences() {
                   <h3 className="text-2xl font-black text-navy">
                     {experience.company}
                   </h3>
-                  <ClayBadge>
+                  <ClayBadge className="bg-gold/40">
                     <span className="text-xl">{experience.period}</span>
                   </ClayBadge>
                 </div>
 
                 {/* Role */}
-                <span className="text-navy/60 font-bold text-sm mb-3">
-                  {experience.role}
+                <span className="text-navy font-bold text-sm mb-3">
+                  - {experience.role}
                 </span>
 
                 {/* Description */}

@@ -10,23 +10,23 @@ export default function Hero() {
       {/* 왼쪽 영역 */}
       <div className="space-y-8">
         {/* 인사 태그 */}
-        <Tagline>HELLO THERE! 👋</Tagline>
+        <Tagline>HELLO WORLD! 🚀</Tagline>
         {/* 메인 제목 */}
-        <h1 className="text-8xl font-black text-white leading-tight clay-text">
-          FULL STACK <br />
-          <span className="text-navy">CREATIVE</span>
+        <h1 className="text-7xl font-black text-navy leading-tight clay-text">
+          FRONT END <br />
+          <span className="text-blue">ADVENTUROUS</span>
           <br />
           DEVELOPER
         </h1>
 
         <p className="text-xl text-navy/80 font-semibold max-w-md">
-          I build web experiences that feel as good as they look. Focused on
-          React, interactive UI, and playful interactions.
+          I picture someone using my interface for the first time. The endless
+          tweaking to get there is the challenge I enjoy most
         </p>
 
         <div className="flex gap-4">
-          <ClayButton variant="primary">View Work</ClayButton>
-          <ClayButton variant="secondary">Contact Me</ClayButton>
+          <ClayButton variant="blue">View Work</ClayButton>
+          <ClayButton variant="yellow">Contact Me</ClayButton>
         </div>
       </div>
 
@@ -35,10 +35,7 @@ export default function Hero() {
         <div className="relative w-full max-w-md animate-float">
           <ClayCard variant="purple" className="p-8">
             <h3 className="text-3xl font-black text-white">KEEP IT GOING</h3>
-            <p className="text-white/80 mt-2">
-              As a challenging person, I enjoy new things and exploring
-              different fields
-            </p>
+            <p className="text-white/80 mt-2">WORK IN PROGRESS</p>
 
             {/* 통계 그리드 */}
             <div className="grid grid-cols-2 gap-4 mt-8">

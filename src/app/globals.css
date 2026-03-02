@@ -46,13 +46,12 @@
   /* CSS Custom Properties */
   --color-sky: var(--sky);
   --color-sky-foreground: var(--sky-foreground);
-  --color-sky-light: var(--sky-light);
+  --color-blue: var(--blue);
+  --color-blue-foreground: var(--blue-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
-  --color-gold-dark: var(--gold-dark);
-  --color-gold-light: var(--gold-light);
 
   /* Custom Animation */
   --animate-float: float 6s ease-in-out infinite;
@@ -95,15 +94,14 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* CSS Custom Property Value */
-  --sky: #6cabdd;
-  --sky-foreground: #1c2c5b;
-  --sky-light: #9acbeb;
-  --navy: #1c2c5b;
+  --sky: #f0f9ff;
+  --sky-foreground: #0c4a6e;
+  --blue: #38bdf8;
+  --blue-foreground: #0c4a6e;
+  --navy: #0c4a6e;
   --navy-foreground: #ffffff;
-  --gold: #daa520;
-  --gold-foreground: #1c2c5b;
-  --gold-dark: #b8860b;
-  --gold-light: #f4c430;
+  --gold: #f0c040;
+  --gold-foreground: #0c4a6e;
 }
 
 .dark {
@@ -142,13 +140,12 @@
   /* CSS Custom Property Value */
   --sky: #0f1a2e;
   --sky-foreground: #e2e8f0;
-  --sky-light: #1a2a4a;
+  --blue: #60a5fa;
+  --blue-foreground: #0f1a2e;
   --navy: #a8b8d8;
   --navy-foreground: #0f1a2e;
   --gold: #f4c430;
   --gold-foreground: #1a1200;
-  --gold-dark: #daa520;
-  --gold-light: #ffd700;
 }
 
 /* Claymorphism */
@@ -157,8 +154,8 @@
   backdrop-filter: blur(12px);
   box-shadow:
     inset 6px 6px 12px rgba(255, 255, 255, 0.9),
-    inset -6px -6px 12px rgba(108, 171, 221, 0.2),
-    12px 12px 24px rgba(28, 44, 91, 0.25);
+    inset -6px -6px 12px rgba(12, 74, 110, 0.12),
+    12px 12px 24px rgba(12, 74, 110, 0.18);
   border-radius: 32px;
 }
 
@@ -167,7 +164,7 @@
   box-shadow:
     inset 6px 6px 12px rgba(255, 255, 255, 0.2),
     inset -6px -6px 12px rgba(0, 0, 0, 0.3),
-    12px 12px 24px rgba(10, 20, 50, 0.4);
+    12px 12px 24px rgba(12, 74, 110, 0.35);
   border-radius: 32px;
 }
 
@@ -176,12 +173,12 @@
   box-shadow:
     inset 6px 6px 12px rgba(255, 255, 255, 0.5),
     inset -6px -6px 12px rgba(161, 98, 7, 0.2),
-    12px 12px 24px rgba(28, 44, 91, 0.3);
+    12px 12px 24px rgba(12, 74, 110, 0.2);
   border-radius: 32px;
 }
 
 .clay-text {
-  text-shadow: 3px 3px 0px rgba(28, 44, 91, 0.15);
+  text-shadow: 3px 3px 0px rgba(12, 74, 110, 0.15);
 }
 
 @keyframes float {

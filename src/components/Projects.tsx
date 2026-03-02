@@ -7,10 +7,10 @@ export default function Projects() {
     <section id="projects" className="py-6">
       {/* Project section  */}
       <div className="mb-12">
-        <h2 className="text-5xl font-black text-white clay-text">
+        <h2 className="text-5xl font-black text-navy clay-text">
           FEATURED <br /> STUFF
         </h2>
-        <div className="h-3 w-32 bg-navy rounded-full mt-2" />
+        <div className="h-3 w-32 bg-gold rounded-full mt-2" />
       </div>
 
       {/* project cards */}
@@ -53,7 +53,7 @@ export default function Projects() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-bold px-3 py-1 rounded-lg bg-sky/20 text-navy"
+                  className="text-xs font-bold px-3 py-1 rounded-lg bg-gold/30 text-navy"
                 >
                   #{tag}
                 </span>

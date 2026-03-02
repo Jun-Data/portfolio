@@ -35,7 +35,7 @@ reference/              # AI 생성 랜딩 페이지 (구현 참고용)
 
 ## 디자인 시스템
 
-- **색상**: sky(#6CABDD), navy(#1C2C5B), gold(#DAA520) + foreground 쌍
+- **색상**: sky(#f0f9ff), navy(#0c4a6e), blue(#38bdf8), gold(#f0c040) + foreground 쌍
 - **Claymorphism**: inset/outset box-shadow로 3D clay 효과
 - **다크모드**: CSS 변수 기반 (.dark 클래스)
 
