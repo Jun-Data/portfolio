@@ -11,7 +11,7 @@ export default function Footer() {
           <a
             href="https://linkedin.com/in/hyunjun-lee-7b0995285"
             target="_blank"
-            className="p-3 bg-white/30 rounded-full hover:bg-white hover:scale-105 transition-all duration-300"
+            className="p-3 bg-white rounded-full hover:bg-white/30 hover:scale-105 transition-all duration-300"
           >
             <svg
               viewBox="0 0 640 640"
@@ -26,7 +26,7 @@ export default function Footer() {
           <a
             href="https://github.com/Jun-Data"
             target="_blank"
-            className="p-3 bg-white/30 rounded-full hover:bg-white hover:scale-105 transition-all duration-300"
+            className="p-3 bg-white rounded-full hover:bg-white/30 hover:scale-105 transition-all duration-300"
           >
             <svg
               viewBox="0 0 640 640"

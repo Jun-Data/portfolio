@@ -9,7 +9,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     role: 'Student',
-    company: 'Chung-ang University',
+    company: 'Chung-Ang University',
     period: '2018.02 ~ 2024.02',
     description: 'Double Majored in Civil & Electrical Engineering',
     type: 'University',
@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     role: 'Trainee',
     company: 'Samsung Software Academy For Youth (SSAFY)',
     period: '2024.07 ~ 2025.07',
-    description: 'Learning the basic web applications with Python, React',
+    description: 'Learning basic web applications with Python, React',
     type: 'Academy',
   },
   {

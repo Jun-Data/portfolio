@@ -18,7 +18,7 @@ export default function Navigation() {
           : 'opacity-0 translate-x-10 pointer-events-none'
       }`}
     >
-      <nav className="bg-white/70 backdrop-blur-xl border border-white/40 rounded-full py-3 px-2 flex flex-col items-center gap-4 shadow-[8px_8px_16px_rgba(28,44,91,0.1),inset_1px_1px_2px_rgba(255,255,255,0.8)]">
+      <nav className="bg-white/70 backdrop-blur-xl border border-white/40 rounded-full py-3 px-2 flex flex-col items-center gap-4 shadow-[8px_8px_16px_rgba(12,74,110,0.1),inset_1px_1px_2px_rgba(255,255,255,0.8)]">
         {navItems.map((item) => (
           <a
             key={item.id}
