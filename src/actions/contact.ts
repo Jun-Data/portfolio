@@ -16,13 +16,14 @@ export async function sendEmail(data: {
   }
   const { error } = await resend.emails.send({
     from: 'Portfolio Contact <onboarding@resend.dev>',
-    to: ['jun.hyunjun.lee@gmail.com'],
+    to: ['jun9048@naver.com'],
     replyTo: email,
     subject: `Portfolio Contact from ${email}`,
     text: message,
   })
   if (error) {
-    return { success: false, error: 'Failed to send email' }
+    console.error('Resend error:', error)
+    return { success: false, error: error.message }
   }
   return { success: true }
 }
