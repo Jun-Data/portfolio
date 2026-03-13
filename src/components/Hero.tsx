@@ -1,12 +1,9 @@
-'use client'
-
-import { ClayButton } from '@/components/ClayButton'
 import { ClayCard } from '@/components/ClayCard'
 import Tagline from '@/components/Tagline'
 
 export default function Hero() {
   return (
-    <section id="home" className="grid grid-cols-2 gap-8 items-center">
+    <section id="home" className="flex-1 grid grid-cols-2 gap-8 items-center">
       {/* 왼쪽 영역 */}
       <div className="space-y-8">
         {/* 인사 태그 */}
@@ -23,11 +20,6 @@ export default function Hero() {
           I picture someone using my interface for the first time. The endless
           tweaking to get there is the challenge I enjoy most
         </p>
-
-        <div className="flex gap-4">
-          <ClayButton variant="blue">View Work</ClayButton>
-          <ClayButton variant="yellow">Contact Me</ClayButton>
-        </div>
       </div>
 
       {/* 오른쪽 영역 */}
