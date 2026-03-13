@@ -18,7 +18,7 @@ export async function sendEmail(data: {
     from: 'Portfolio Contact <onboarding@resend.dev>',
     to: ['jun9048@naver.com'],
     replyTo: email,
-    subject: `Portfolio Contact from ${email}`,
+    subject: `Email sent in Portfolio from ${email}`,
     text: message,
   })
   if (error) {

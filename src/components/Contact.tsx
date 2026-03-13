@@ -6,23 +6,35 @@ import { ClayButton } from './ClayButton'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { sendEmail } from '@/actions/contact'
 
-type FormStatus = 'idle' | 'loading' | 'success' | 'error'
+type FormStatus = 'idle' | 'loading' | 'success'
 
 export default function Contact() {
   const [email, setEmail] = useState('') // 이메일 입력값
   const [message, setMessage] = useState('') // 메세지 입력값
-  const [status, setStatus] = useState<FormStatus>('idle') // 현재 상태
-  const [errorMessage, setErrorMessage] = useState('') // 에러 메세지
+  const [status, setStatus] = useState<FormStatus>('idle') // 폼 상태
+  const [emailError, setEmailError] = useState('') // 이메일 필드 에러
+  const [messageError, setMessageError] = useState('') // 메세지 필드 에러
+  const [serverError, setServerError] = useState('') // 서버 에러
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!email.trim() || !message.trim()) {
-      setStatus('error')
-      setErrorMessage('Please fill in both fields')
-      return
+    let hasError = false
+
+    if (!email.trim()) {
+      setEmailError('Please enter your email address')
+      hasError = true
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError('Please enter a valid email address')
+      hasError = true
     }
+    if (!message.trim()) {
+      setMessageError('Please enter your message')
+      hasError = true
+    }
+    if (hasError) return
     setStatus('loading')
-    setErrorMessage('')
+    setServerError('')
+
     const result = await sendEmail({
       email: email.trim(),
       message: message.trim(),
@@ -32,8 +44,8 @@ export default function Contact() {
       setEmail('')
       setMessage('')
     } else {
-      setStatus('error')
-      setErrorMessage(result.error)
+      setStatus('idle')
+      setServerError(result.error)
     }
   }
 
@@ -74,23 +86,46 @@ export default function Contact() {
                 type="email"
                 placeholder="Your email address"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                  if (emailError) setEmailError('')
+                }}
+                onBlur={() => {
+                  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    setEmailError('Please enter a valid email address')
+                  }
+                }}
                 disabled={status === 'loading'}
                 className="w-full bg-white/50 backdrop-blur-sm border-none rounded-2xl px-6 py-4 text-navy placeholder-navy/50 font-medium focus:outline-none focus:ring-2 focus:ring-navy/20 shadow-[inset_3px_3px_6px_rgba(12,74,110,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] transition-all disabled:opacity-50"
               />
+              {emailError && (
+                <p className="text-red-600 font-medium px-1 text-sm flex items-center gap-1">
+                  <AlertCircle size={16} />
+                  {emailError}
+                </p>
+              )}
               <textarea
                 rows={4}
                 placeholder="How can I help you?"
                 value={message}
-                onChange={(m) => setMessage(m.target.value)}
+                onChange={(m) => {
+                  setMessage(m.target.value)
+                  if (messageError) setMessageError('')
+                }}
                 disabled={status === 'loading'}
                 className="w-full bg-white/50 backdrop-blur-sm border-none rounded-2xl px-6 py-4 text-navy placeholder-navy/50 font-medium focus:outline-none focus:ring-2 focus:ring-navy/20 shadow-[inset_3px_3px_6px_rgba(12,74,110,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] resize-none transition-all disabled:opacity-50"
               />
-              {status === 'error' && (
-                <div className="flex items-center gap-2 text-red-700 font-medium px-2">
-                  <AlertCircle size={18} />
-                  <span>{errorMessage}</span>
-                </div>
+              {messageError && (
+                <p className="text-red-600 font-medium px-1 text-sm flex items-center gap-1">
+                  <AlertCircle size={16} />
+                  {messageError}
+                </p>
+              )}
+              {serverError && (
+                <p className="text-red-600 font-medium px-1 text-sm flex items-center gap-1">
+                  <AlertCircle size={16} />
+                  {serverError}
+                </p>
               )}
               <ClayButton
                 type="submit"
