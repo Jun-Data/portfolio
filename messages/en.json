@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "HELLO WORLD! 🚀",
+    "title1": "FRONTEND",
+    "title2": "ADVENTUROUS",
+    "title3": "DEVELOPER",
+    "description": "I picture someone enjoying my interface. The endless tweaking to make that happen is the challenge I enjoy most",
+    "cardTitle": "KEEP IT GOING",
+    "cardSubtitle": "WORK IN PROGRESS",
+    "yearsExperience": "Years Experience",
+    "projects": "Projects"
+  },
+  "skills": {
+    "title1": "CREATIVE",
+    "title2": "TOOLKIT",
+    "categories": {
+      "All": "All",
+      "Frontend": "Frontend",
+      "Libraries": "Libraries",
+      "Environment": "Environment",
+      "Design": "Design"
+    }
+  }
+}
