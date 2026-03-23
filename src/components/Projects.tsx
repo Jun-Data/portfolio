@@ -1,14 +1,17 @@
 import Image from 'next/image'
 import { ClayCard } from './ClayCard'
 import { projects } from '@/data/projects'
+import { getTranslations } from 'next-intl/server'
 
-export default function Projects() {
+export default async function Projects() {
+  const t = await getTranslations('projects')
+
   return (
     <section id="projects" className="py-6">
       {/* Project section  */}
       <div className="mb-12">
         <h2 className="text-5xl font-black text-navy clay-text">
-          FEATURED <br /> STUFF
+          {t('title1')} <br /> {t('title2')}
         </h2>
         <div className="h-3 w-32 bg-gold rounded-full mt-2" />
       </div>
@@ -17,7 +20,7 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8">
         {projects.map((project) => (
           <ClayCard
-            key={project.title}
+            key={project.slug}
             variant="white"
             className="group flex flex-col justify-between overflow-hidden"
           >
@@ -33,7 +36,7 @@ export default function Projects() {
               {/* hover overlay */}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="bg-white/90 text-navy px-4 py-2 rounded-full font-bold text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform">
-                  View Details
+                  {t('viewDetails')}
                 </span>
               </div>
             </div>
@@ -44,7 +47,7 @@ export default function Projects() {
                 {project.title}
               </h3>
               <p className="font-medium text-lg text-navy/70">
-                {project.description}
+                {t(`items.${project.slug}.description`)}
               </p>
             </div>
 

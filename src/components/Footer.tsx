@@ -1,10 +1,14 @@
-export default function Footer() {
+import { getTranslations } from 'next-intl/server'
+
+export default async function Footer() {
+  const t = await getTranslations('footer')
+
   return (
     <footer className="py-10">
       <div className="flex items-center justify-between">
         {/* 상표  */}
         <p className="font-bold text-sm">
-          © {new Date().getFullYear()}. Lee Hyun Jun. All rights reserved.
+          {t('copyright', { year: new Date().getFullYear().toString() })}
         </p>
         {/* 소셜 */}
         <div className="flex gap-4">

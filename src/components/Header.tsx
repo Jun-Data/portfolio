@@ -1,7 +1,10 @@
 import { navItems } from '@/data/navigation'
-import { Globe } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
+import LocaleSwitcher from './LocaleSwitcher'
 
-export default function Header() {
+export default async function Header() {
+  const t = await getTranslations('nav')
+
   return (
     <header className="relative pt-6">
       <nav className="flex items-center justify-between">
@@ -21,16 +24,13 @@ export default function Header() {
                   href={item.href}
                   className="text-lg font-bold text-navy/70 hover:text-navy transition-colors"
                 >
-                  {item.label}
+                  {t(item.id)}
                 </a>
               </li>
             ))}
           </ul>
 
-          <button className="flex items-center gap-1.5 text-sm font-bold text-navy/60">
-            <Globe size={16} />
-            한국어
-          </button>
+          <LocaleSwitcher />
         </div>
       </nav>
     </header>

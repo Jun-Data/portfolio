@@ -26,5 +26,66 @@
       "Environment": "Environment",
       "Design": "Design"
     }
+  },
+  "projects": {
+    "title1": "FEATURED",
+    "title2": "STUFF",
+    "viewDetails": "View Details",
+    "items": {
+      "whisker": {
+        "description": "Finance app with cute cat interface and game"
+      },
+      "muinus": {
+        "description": "Unmanned store platform co-created by consumers and owners"
+      },
+      "damdam": {
+        "description": "Talk with DamDam until you find your inner peace"
+      },
+      "modak": {
+        "description": "Toss your daily stress into a shared digital bonfire"
+      }
+    }
+  },
+  "experiences": {
+    "title1": "WORK",
+    "title2": "HISTORY",
+    "items": {
+      "chung-ang": {
+        "role": "Student",
+        "company": "Chung-Ang University",
+        "description": "Double Majored in Civil & Electrical Engineering"
+      },
+      "ssafy": {
+        "role": "Trainee",
+        "company": "Samsung Software Academy For Youth (SSAFY)",
+        "description": "Learning basic web applications with Python, React"
+      },
+      "hygino": {
+        "role": "Junior Frontend Engineer",
+        "company": "Hygino",
+        "description": "Development of a digital twin-based smart factory monitoring dashboard"
+      }
+    }
+  },
+  "contact": {
+    "heading": "READY TO COLLABORATE ?",
+    "description": "Want to share your work or discuss an opportunity ?",
+    "descriptionSuffix": "Let's connect!",
+    "emailPlaceholder": "Your email address",
+    "messagePlaceholder": "How can I help you?",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for reaching out. I will get back to you soon.",
+    "done": "Done",
+    "errorEmailRequired": "Please enter your email address",
+    "errorEmailInvalid": "Please enter a valid email address",
+    "errorMessageRequired": "Please enter your message"
+  },
+  "footer": {
+    "copyright": "© {year}. Lee Hyun Jun. All rights reserved."
+  },
+  "langSwitch": {
+    "label": "한국어"
   }
 }

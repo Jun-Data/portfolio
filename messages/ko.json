@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "skills": "기술스택",
+    "projects": "프로젝트",
+    "experiences": "경력",
+    "contact": "문의"
+  },
+  "hero": {
+    "tagline": "HELLO WORLD! 🚀",
+    "title1": "프론트엔드",
+    "title2": "도전적인",
+    "title3": "개발자",
+    "description": "언제나 사용자가 서비스를 사용하는 순간을 상상하며 개발합니다",
+    "cardTitle": "KEEP IT GOING",
+    "cardSubtitle": "성장 진행형",
+    "yearsExperience": "경력 연수",
+    "projects": "프로젝트"
+  },
+  "skills": {
+    "title1": "기술 스택",
+    "title2": "",
+    "categories": {
+      "All": "All",
+      "Frontend": "Frontend",
+      "Libraries": "Libraries",
+      "Environment": "Environment",
+      "Design": "Design"
+    }
+  },
+  "projects": {
+    "title1": "프로젝트",
+    "title2": "",
+    "viewDetails": "자세히 보기",
+    "items": {
+      "whisker": {
+        "description": "고양이 테마의 금융 상품 추천 웹 플랫폼"
+      },
+      "muinus": {
+        "description": "소비자와 점주가 함께 만들어가는 무인 판매점 플랫폼"
+      },
+      "damdam": {
+        "description": "AI 심리 상담 챗봇 & 레포트"
+      },
+      "modak": {
+        "description": "일상 스트레스 해소 플랫폼"
+      }
+    }
+  },
+  "experiences": {
+    "title1": "경력",
+    "title2": "",
+    "items": {
+      "chung-ang": {
+        "role": "학생",
+        "company": "중앙대학교",
+        "description": "토목공학 & 전자전기공학 복수전공"
+      },
+      "ssafy": {
+        "role": "12기 교육생",
+        "company": "삼성 청년 소프트웨어 아카데미 (SSAFY)",
+        "description": "웹 애플리케이션 기초 학습"
+      },
+      "hygino": {
+        "role": "프론트엔드 개발자",
+        "company": "Hygino",
+        "description": "디지털 트윈 기반 스마트 팩토리 관제 대시보드 프론트엔드 개발"
+      }
+    }
+  },
+  "contact": {
+    "heading": "방문해주셔서 감사합니다",
+    "description": "추가로 궁금한점이 있으시면 편하게 메세지를 남겨주세요",
+    "descriptionSuffix": "",
+    "emailPlaceholder": "이메일 주소",
+    "messagePlaceholder": "메시지",
+    "sendButton": "전송",
+    "sending": "전송 중...",
+    "successTitle": "전송 완료!",
+    "successMessage": "감사합니다! 곧 답변드리겠습니다",
+    "done": "확인",
+    "errorEmailRequired": "이메일 주소를 입력해주세요",
+    "errorEmailInvalid": "유효한 이메일 주소를 입력해주세요",
+    "errorMessageRequired": "메시지를 입력해주세요"
+  },
+  "footer": {
+    "copyright": "© {year}. Lee Hyun Jun. All rights reserved."
+  },
+  "langSwitch": {
+    "label": "English"
+  }
+}

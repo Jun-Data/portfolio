@@ -2,6 +2,7 @@ import { ClayCard } from './ClayCard'
 import { ClayBadge } from './ClayBadge'
 import { experiences } from '@/data/experience'
 import { BriefcaseBusiness, GraduationCap, Tent } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 const iconMap = {
   University: GraduationCap,
@@ -9,13 +10,15 @@ const iconMap = {
   Startup: BriefcaseBusiness,
 }
 
-export default function Experiences() {
+export default async function Experiences() {
+  const t = await getTranslations('experiences')
+
   return (
     <section id="experiences" className="py-6">
       {/* 제목 */}
       <div className="mb-12">
         <h2 className="text-5xl font-black text-navy clay-text">
-          WORK <br /> HISTORY
+          {t('title1')} <br /> {t('title2')}
         </h2>
         <div className="h-3 w-32 bg-gold rounded-full mt-2" />
       </div>
@@ -27,7 +30,7 @@ export default function Experiences() {
           return (
             <ClayCard
               variant="white"
-              key={experience.company}
+              key={experience.slug}
               className="flex items-start p-6 gap-6 hover:scale-[1.02] transition-transform"
             >
               {/* Icon Area */}
@@ -40,7 +43,7 @@ export default function Experiences() {
                 {/* Place + Period */}
                 <div className="flex items-center justify-between gap-2">
                   <h3 className="text-2xl font-black text-navy">
-                    {experience.company}
+                    {t(`items.${experience.slug}.company`)}
                   </h3>
                   <ClayBadge className="bg-gold/40">
                     <span className="text-xl">{experience.period}</span>
@@ -49,12 +52,12 @@ export default function Experiences() {
 
                 {/* Role */}
                 <span className="text-navy font-bold text-sm mb-3">
-                  - {experience.role}
+                  - {t(`items.${experience.slug}.role`)}
                 </span>
 
                 {/* Description */}
                 <p className="text-navy/80 font-medium leading-relaxed">
-                  {experience.description}
+                  {t(`items.${experience.slug}.description`)}
                 </p>
               </div>
             </ClayCard>
