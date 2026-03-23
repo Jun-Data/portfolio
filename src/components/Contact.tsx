@@ -5,30 +5,32 @@ import { ClayCard } from './ClayCard'
 import { ClayButton } from './ClayButton'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { sendEmail } from '@/actions/contact'
+import { useTranslations } from 'next-intl'
 
 type FormStatus = 'idle' | 'loading' | 'success'
 
 export default function Contact() {
-  const [email, setEmail] = useState('') // 이메일 입력값
-  const [message, setMessage] = useState('') // 메세지 입력값
-  const [status, setStatus] = useState<FormStatus>('idle') // 폼 상태
-  const [emailError, setEmailError] = useState('') // 이메일 필드 에러
-  const [messageError, setMessageError] = useState('') // 메세지 필드 에러
-  const [serverError, setServerError] = useState('') // 서버 에러
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState<FormStatus>('idle')
+  const [emailError, setEmailError] = useState('')
+  const [messageError, setMessageError] = useState('')
+  const [serverError, setServerError] = useState('')
+  const t = useTranslations('contact')
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     let hasError = false
 
     if (!email.trim()) {
-      setEmailError('Please enter your email address')
+      setEmailError(t('errorEmailRequired'))
       hasError = true
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setEmailError('Please enter a valid email address')
+      setEmailError(t('errorEmailInvalid'))
       hasError = true
     }
     if (!message.trim()) {
-      setMessageError('Please enter your message')
+      setMessageError(t('errorMessageRequired'))
       hasError = true
     }
     if (hasError) return
@@ -57,24 +59,22 @@ export default function Contact() {
           className="text-center py-16 px-6 hover:scale-100 active:scale-100"
         >
           <h2 className="text-5xl font-black text-navy mb-6">
-            READY TO COLLABORATE ?
+            {t('heading')}
           </h2>
           <p className="text-xl text-navy/80 font-medium mb-10">
-            Want to share your work or discuss an opportunity ? <br /> Lets
-            connect !
+            {t('description')} <br /> {t('descriptionSuffix')}
           </p>
 
           {/* Form */}
           {status === 'success' ? (
-            // 성공 화면
             <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 py-8">
               <CheckCircle size={48} className="text-navy" />
-              <p className="text-2xl font-bold text-navy">Message Sent!</p>
+              <p className="text-2xl font-bold text-navy">{t('successTitle')}</p>
               <p className="font-medium text-navy/70">
-                Thank you for reaching out. I will get back to you soon.
+                {t('successMessage')}
               </p>
               <ClayButton variant="primary" onClick={() => setStatus('idle')}>
-                Done
+                {t('done')}
               </ClayButton>
             </div>
           ) : (
@@ -84,7 +84,7 @@ export default function Contact() {
             >
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder={t('emailPlaceholder')}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value)
@@ -92,7 +92,7 @@ export default function Contact() {
                 }}
                 onBlur={() => {
                   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    setEmailError('Please enter a valid email address')
+                    setEmailError(t('errorEmailInvalid'))
                   }
                 }}
                 disabled={status === 'loading'}
@@ -106,7 +106,7 @@ export default function Contact() {
               )}
               <textarea
                 rows={4}
-                placeholder="How can I help you?"
+                placeholder={t('messagePlaceholder')}
                 value={message}
                 onChange={(m) => {
                   setMessage(m.target.value)
@@ -136,12 +136,12 @@ export default function Contact() {
                 {status === 'loading' ? (
                   <>
                     <Loader2 size={20} className="animate-spin" />
-                    Sending...
+                    {t('sending')}
                   </>
                 ) : (
                   <>
                     <Send size={20} />
-                    Send Message
+                    {t('sendButton')}
                   </>
                 )}
               </ClayButton>

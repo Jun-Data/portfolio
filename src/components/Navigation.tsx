@@ -4,12 +4,15 @@ import { navItems } from '@/data/navigation'
 import { useScrollPast } from '@/hooks/useScrollPast'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { ArrowUp } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const sectionIds = navItems.map((item) => item.id)
 
 export default function Navigation() {
   const isScrolled = useScrollPast(300)
   const activeSection = useActiveSection(sectionIds)
+  const t = useTranslations('nav')
+
   return (
     <div
       className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ${
@@ -23,11 +26,11 @@ export default function Navigation() {
           <a
             key={item.id}
             href={item.href}
-            aria-label={item.label}
+            aria-label={t(item.id)}
             className={`group relative p-2 rounded-full transition-all duration-300 ${activeSection === item.id ? 'bg-gold text-navy shadow-[2px_2px_5px_rgba(0,0,0,0.1)] scale-110' : 'text-navy/60 hover:text-navy hover:bg-white/50'}`}
           >
             <span className="absolute right-full px-3 py-1 bg-navy rounded-lg text-white text-xs font-bold whitespace-nowrap opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 pointer-events-none">
-              {item.label}
+              {t(item.id)}
             </span>
             <item.icon size={20} />
           </a>

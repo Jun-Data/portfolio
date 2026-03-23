@@ -4,9 +4,11 @@ import { useState } from 'react'
 import { ClayCard } from '@/components/ClayCard'
 import { skills, skillCategories } from '@/data/skills'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState('All')
+  const t = useTranslations('skills')
 
   return (
     <section id="skills" className="py-6">
@@ -15,8 +17,8 @@ export default function Skills() {
         {/* 제목 */}
         <div>
           <h2 className="text-5xl font-black text-navy clay-text">
-            CREATIVE <br />
-            TOOLKIT
+            {t('title1')} <br />
+            {t('title2')}
           </h2>
           <div className="h-3 w-32 bg-gold rounded-full mt-2" />
         </div>
@@ -29,7 +31,7 @@ export default function Skills() {
               onClick={() => setActiveTab(category)}
               className={`px-4 py-2 rounded-full font-bold text-xs text-navy transition-all duration-300 ${activeTab === category ? 'bg-gold shadow-[inset_2px_2px_4px_rgba(255,255,255,0.4),4px_4px_8px_rgba(12,74,110,0.2)] scale-105' : 'bg-white hover:bg-white/30'}`}
             >
-              {category}
+              {t(`categories.${category}`)}
             </button>
           ))}
         </div>
