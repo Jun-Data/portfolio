@@ -31,6 +31,8 @@
     "title1": "FEATURED",
     "title2": "STUFF",
     "viewDetails": "View Details",
+    "inProgress": "In Progress",
+
     "items": {
       "whisker": {
         "description": "Finance app with cute cat interface and game"
