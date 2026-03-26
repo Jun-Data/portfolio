@@ -32,7 +32,7 @@
     "title2": "STUFF",
     "viewDetails": "View Details",
     "inProgress": "In Progress",
-
+    "comingSoon": "Coming Soon",
     "items": {
       "whisker": {
         "description": "Finance app with cute cat interface and game"
