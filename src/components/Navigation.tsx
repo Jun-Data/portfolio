@@ -37,7 +37,7 @@ export default function Navigation() {
         ))}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="p-2 bg-navy/5 rounded-full transition-all duration-300 hover:bg-navy hover:text-white"
+          className="p-2 bg-navy/5 rounded-full transition-all duration-300 hover:bg-navy hover:text-white cursor-pointer"
           aria-label="Scroll to top"
         >
           <ArrowUp size={20} />
