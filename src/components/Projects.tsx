@@ -26,24 +26,32 @@ export default async function Projects() {
           >
             {/* image */}
             <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)]">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-contain group-hover:scale-110 transition-transform duration-500"
-              />
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-contain group-hover:scale-110 transition-transform duration-500"
+                />
+              ) : (
+                <div className="flex items-center justify-center h-full text-navy text-3xl font-bold">
+                  {t('comingSoon')}
+                </div>
+              )}
 
               {/* hover overlay */}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-              >
-                <span className="bg-white/90 text-navy px-4 py-2 rounded-full font-bold text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform">
-                  {t('viewDetails')}
-                </span>
-              </a>
+              {project.status === 'completed' && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span className="bg-white/90 text-navy px-4 py-2 rounded-full font-bold text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform">
+                    {t('viewDetails')}
+                  </span>
+                </a>
+              )}
             </div>
 
             {/* title + description */}

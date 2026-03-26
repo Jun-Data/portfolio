@@ -2,8 +2,8 @@ export type Project = {
   slug: string
   title: string
   tags: string[]
-  image: string
-  github: string
+  image?: string
+  github?: string
   status: 'completed' | 'in-progress'
 }
 
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     slug: 'muinus',
     title: 'Muinus',
     tags: ['React', 'Styled-Components'],
-    image: '/projects/muinus2.png',
+    image: '/projects/muinus.png',
     github: 'https://github.com/Jun-Data/Muinus',
     status: 'completed',
   },
@@ -36,8 +36,6 @@ export const projects: Project[] = [
     slug: 'modak',
     title: 'Modak',
     tags: ['Next.js', 'Three.js'],
-    image: '/projects/modak.png',
-    github: 'https://github.com/Jun-Data/Modak',
     status: 'in-progress',
   },
 ]
