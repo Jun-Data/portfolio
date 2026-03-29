@@ -6,6 +6,7 @@ export type Skill = {
 }
 
 export const skills: Skill[] = [
+  // Frontend
   {
     name: 'React',
     category: 'Frontend',
@@ -14,7 +15,12 @@ export const skills: Skill[] = [
   {
     name: 'TypeScript',
     category: 'Frontend',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+  },
+  {
+    name: 'Vue.js',
+    category: 'Frontend',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
   },
   {
     name: 'Next.js',
@@ -22,69 +28,86 @@ export const skills: Skill[] = [
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
   },
   {
+    name: 'JavaScript',
+    category: 'Frontend',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  },
+  {
     name: 'HTML5',
     category: 'Frontend',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
   },
+  {
+    name: 'CSS3',
+    category: 'Frontend',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  },
+  {
+    name: 'Bootstrap',
+    category: 'Frontend',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+  },
+  // Libraries
   {
     name: 'Tailwind',
     category: 'Libraries',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
   },
   {
-    name: 'Three.js',
+    name: 'Styled Components',
     category: 'Libraries',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/styledcomponents/styledcomponents-original.svg',
   },
   {
-    name: 'Redux',
+    name: 'React Query',
     category: 'Libraries',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+    url: 'https://cdn.simpleicons.org/reactquery',
   },
   {
-    name: 'Framer',
+    name: 'Zustand',
     category: 'Libraries',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg',
   },
-  {
-    name: 'Node.js',
-    category: 'Environment',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-  },
+  // Tools
   {
     name: 'Git',
-    category: 'Environment',
+    category: 'Tools',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   },
   {
-    name: 'Firebase',
-    category: 'Environment',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+    name: 'GitHub',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
   },
   {
-    name: 'Vercel',
-    category: 'Environment',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg',
+    name: 'ESLint',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg',
+  },
+  {
+    name: 'Prettier',
+    category: 'Tools',
+    url: 'https://cdn.simpleicons.org/prettier',
+  },
+  {
+    name: 'Vite',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg',
   },
   {
     name: 'Figma',
-    category: 'Design',
+    category: 'Tools',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
   },
   {
-    name: 'Photoshop',
-    category: 'Design',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg',
+    name: 'Notion',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg',
   },
   {
-    name: 'Illustrator',
-    category: 'Design',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg',
-  },
-  {
-    name: 'Blender',
-    category: 'Design',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg',
+    name: 'Jira',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg',
   },
 ]
 
@@ -92,6 +115,5 @@ export const skillCategories = [
   'All',
   'Frontend',
   'Libraries',
-  'Environment',
-  'Design',
+  'Tools',
 ] as const
