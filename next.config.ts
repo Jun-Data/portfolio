@@ -5,7 +5,11 @@ const withNextIntl = createNextIntlPlugin()
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [{ protocol: 'https', hostname: 'cdn.jsdelivr.net' }],
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.jsdelivr.net' },
+      { protocol: 'https', hostname: 'cdn.simpleicons.org' },
+    ],
   },
 }
 
