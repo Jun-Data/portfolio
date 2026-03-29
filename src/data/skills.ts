@@ -8,9 +8,9 @@ export type Skill = {
 export const skills: Skill[] = [
   // Frontend
   {
-    name: 'React',
+    name: 'JavaScript',
     category: 'Frontend',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   },
   {
     name: 'TypeScript',
@@ -18,9 +18,9 @@ export const skills: Skill[] = [
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
   },
   {
-    name: 'Vue.js',
+    name: 'React',
     category: 'Frontend',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     name: 'Next.js',
@@ -28,9 +28,9 @@ export const skills: Skill[] = [
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
   },
   {
-    name: 'JavaScript',
+    name: 'Vue.js',
     category: 'Frontend',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
   },
   {
     name: 'HTML5',
@@ -41,11 +41,6 @@ export const skills: Skill[] = [
     name: 'CSS3',
     category: 'Frontend',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-  },
-  {
-    name: 'Bootstrap',
-    category: 'Frontend',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
   },
   // Libraries
   {
@@ -59,9 +54,14 @@ export const skills: Skill[] = [
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/styledcomponents/styledcomponents-original.svg',
   },
   {
-    name: 'React Query',
+    name: 'Bootstrap',
     category: 'Libraries',
-    url: 'https://cdn.simpleicons.org/reactquery',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+  },
+  {
+    name: 'TanStack Query',
+    category: 'Libraries',
+    url: 'https://cdn.simpleicons.org/tanstack/FF4154',
   },
   {
     name: 'Zustand',
@@ -80,6 +80,11 @@ export const skills: Skill[] = [
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
   },
   {
+    name: 'Vite',
+    category: 'Tools',
+    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
+  },
+  {
     name: 'ESLint',
     category: 'Tools',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg',
@@ -88,11 +93,6 @@ export const skills: Skill[] = [
     name: 'Prettier',
     category: 'Tools',
     url: 'https://cdn.simpleicons.org/prettier',
-  },
-  {
-    name: 'Vite',
-    category: 'Tools',
-    url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg',
   },
   {
     name: 'Figma',
