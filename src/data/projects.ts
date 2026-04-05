@@ -33,9 +33,9 @@ export const projects: Project[] = [
     status: 'completed',
   },
   {
-    slug: 'modak',
-    title: 'Modak',
-    tags: ['Next.js', 'Three.js'],
+    slug: 'roopick',
+    title: 'Roopick',
+    tags: ['Next.js', 'Spring Boot', 'PostgreSQL'],
     status: 'in-progress',
   },
 ]
